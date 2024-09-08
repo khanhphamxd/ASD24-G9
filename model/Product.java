@@ -1,4 +1,4 @@
-
+package model;
 public class Product {
     // ID tracker for Product
     private static int productIDTracker = 1;
