@@ -1,3 +1,4 @@
+package model;
 public class Vendor {
     // ID tracker for Vendor
     private static int vendorIDTracker = 1;
