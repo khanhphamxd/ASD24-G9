@@ -19,9 +19,9 @@ steps:
   displayName: 'Run a multi-line script'
 
   task: ExampleTest
-  displayName: "Test"
+  displayName: "Test 2"
   inputs:
-    command: 'test'
+    command: 'test 2'
     arguments: '--no-build --configuration $(buildConfiguration)'
     publishTestResults: false
     projects: '**/*.Tests.csproj'
