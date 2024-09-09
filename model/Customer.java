@@ -18,6 +18,7 @@ public class Customer {
     private String gender;
     private String houseAddress;
     private String phoneNum;
+    private boolean isAdmin;
 
     // getters and setters (only getter for ID, as you don't want tampering on the ID)
     public String getUsername() {
@@ -71,6 +72,12 @@ public class Customer {
     public int getCustomerID() {
         return customerID;
     }
+    public boolean isAdmin(){
+        return isAdmin;
+    }
+    public void setAdmin (boolean isAdmin) {
+        this.isAdmin = isAdmin;
+    }
 
     // Constructor used for Customer registration, will increment the ID tracker
     public Customer(String username, String firstName, String lastName, String email, String password,
@@ -88,11 +95,12 @@ public class Customer {
         this.gender = gender;
         this.houseAddress = houseAddress;
         this.phoneNum = phoneNum;
+        this.isAdmin = false;
     }
 
     // Constructor used for database extraction, include the ID in the parameter & will not increment the ID tracker
     public Customer(int customerID, String username, String firstName, String lastName, String email, String password,
-            String gender, String houseAddress, String phoneNum) {
+            String gender, String houseAddress, String phoneNum, boolean isAdmin) {
         this.customerID = customerID;
         this.username = username;
         this.firstName = firstName;
@@ -102,6 +110,7 @@ public class Customer {
         this.gender = gender;
         this.houseAddress = houseAddress;
         this.phoneNum = phoneNum;
+        this.isAdmin = isAdmin;
     }
 
     // Validators that checks for the following rules
