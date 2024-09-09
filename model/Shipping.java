@@ -3,6 +3,9 @@ package model;
 import java.util.Date;
 
 public class Shipping {
+    // Static ID tracker for Shipping
+    private static int shipmentIDTracker = 1;
+
     // Fields
     private int shipmentID;         // Primary Key
     private int orderID;            // Foreign Key to Order table
@@ -10,15 +13,18 @@ public class Shipping {
     private Date estimatedDeliveryDate;
     private String shippingStatus;
 
-    // Constructor for creating a new Shipping record
+    // Constructor for creating a new Shipping record (auto-incremented shipmentID)
     public Shipping(int orderID, String shippingAddress, Date estimatedDeliveryDate, String shippingStatus) {
+        this.shipmentID = shipmentIDTracker;  // Auto-incremented shipmentID
+        shipmentIDTracker++;                  // Increment for the next Shipping
+
         this.orderID = orderID;
         this.shippingAddress = shippingAddress;
         this.estimatedDeliveryDate = estimatedDeliveryDate;
         this.shippingStatus = shippingStatus;
     }
 
-    // Constructor for extracting Shipping details from the database
+    // Constructor for extracting Shipping details from the database (shipmentID provided)
     public Shipping(int shipmentID, int orderID, String shippingAddress, Date estimatedDeliveryDate, String shippingStatus) {
         this.shipmentID = shipmentID;
         this.orderID = orderID;
@@ -71,4 +77,3 @@ public class Shipping {
                 + ", estimatedDeliveryDate=" + estimatedDeliveryDate + ", shippingStatus=" + shippingStatus + "]";
     }
 }
-
