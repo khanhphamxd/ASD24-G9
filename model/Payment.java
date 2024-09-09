@@ -3,6 +3,9 @@ package model;
 import java.util.Date;
 
 public class Payment {
+    // Static ID tracker for Payment
+    private static int paymentIDTracker = 1;
+
     // Fields
     private int paymentID;      // Primary Key
     private int orderID;        // Foreign Key to Order table
@@ -12,8 +15,11 @@ public class Payment {
     private Date paymentDate;
     private String paymentStatus;
 
-    // Constructor for creating a new Payment record
+    // Constructor for creating a new Payment record (auto-incremented paymentID)
     public Payment(int orderID, String paymentMethod, double amount, String cardProvider, Date paymentDate, String paymentStatus) {
+        this.paymentID = paymentIDTracker;  // Auto-incremented paymentID
+        paymentIDTracker++;                 // Increment for the next Payment
+
         this.orderID = orderID;
         this.paymentMethod = paymentMethod;
         this.amount = amount;
@@ -22,7 +28,7 @@ public class Payment {
         this.paymentStatus = paymentStatus;
     }
 
-    // Constructor for extracting Payment details from the database
+    // Constructor for extracting Payment details from the database (paymentID provided)
     public Payment(int paymentID, int orderID, String paymentMethod, double amount, String cardProvider, Date paymentDate, String paymentStatus) {
         this.paymentID = paymentID;
         this.orderID = orderID;
@@ -94,4 +100,3 @@ public class Payment {
                 + ", paymentStatus=" + paymentStatus + "]";
     }
 }
-
