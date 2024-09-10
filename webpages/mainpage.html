@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eaeaea;
+            position: relative;
+        }
+        .logout-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: #2f4f75; 
+            color: white;
+            border: none;
+        }
+        .logout-button:hover {
+            background-color: gray;
+        }
+        .container {
+            text-align: center;
+            background-color: #2f4f75;
+            border: 1px solid #c0c0c0;
+            padding: 40px 60px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            width: 80%;
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-left: 50px;
+            justify-content: center; /* Center the grid horizontally */
+        }
+        .menu-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: #037297;
+            color: white;
+            border: none;
+            width: 150px;
+            text-align: center;
+        }
+        .menu-button:hover {
+            background-color: gray;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="logout-button">Log Out</a>
+
+    <div class="container">
+        <h1>Main Menu</h1>
+        <div class="button-container">
+            <a href="order.html" class="menu-button">Start Order</a>
+            <a href="orderhistory.html" class="menu-button">Order History</a>
+            <a href="useredit.html" class="menu-button">Manage Account</a>
+            <a href="manageitems.html" class="menu-button">Manage Items</a>
+            <a href="customerorders.html" class="menu-button">Customer Orders</a>
+            <a href="manageusers.html" class="menu-button">Manage Users</a>
+        </div>
+    </div>
+
+</body>
+</html>

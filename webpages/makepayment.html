@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eaeaea;
+            position: relative;
+            overflow: auto;
+        }
+
+        /* Back button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: #2f4f75;
+            color: white;
+            border: none;
+        }
+
+        .back-button:hover {
+            background-color: gray;
+        }
+        .info-container {
+            width: 90%;
+            max-width: 600px;
+            background-color: #2f4f75;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: auto;
+        }
+
+        .info-container h2 {
+            margin: 30px 0 20px;
+            font-size: 28px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .info-container h1 {
+            margin: 10px 0;
+            font-size: 18px;
+            width: 30%;
+            text-align: left;
+        }
+
+        .info-container .input-group {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .info-container .input-group h1 {
+            margin: 0;
+            flex: 1;
+            text-align: left;
+        }
+
+        .info-container .input-group input {
+            flex: 2; 
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .info-container input[type="checkbox"] {
+            width: auto;
+            margin-right: 390px;
+        }
+
+        .info-container label {
+            display: flex;
+            align-items: center;
+        }
+
+        .finish-button {
+            padding: 15px 25px;
+            background-color: #037297;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            align-self: center; 
+            margin-top: 20px;
+        }
+
+        .finish-button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back button -->
+    <a href="order.html" class="back-button">Back</a>
+
+
+    <div class="info-container">
+        <h2>Shipping</h2>
+        
+        <div class="input-group">
+            <h1>Street</h1>
+            <input type="text" placeholder="Enter shipping details">
+        </div>
+
+        <div class="input-group">
+            <h1>City</h1>
+            <input type="text" placeholder="Enter city">
+        </div>
+
+        <div class="input-group">
+            <h1>State</h1>
+            <input type="text" placeholder="Enter state">
+        </div>
+
+        <div class="input-group">
+            <h1>Express Shipping</h1>
+            <label>
+                <input type="checkbox">
+            </label>
+        </div>
+
+        <h2 style="margin-top: 30px;">Payment</h2>
+
+        <div class="input-group">
+            <h1>Card Number</h1>
+            <input type="text" placeholder="8272 2983 2992 0485">
+        </div>
+        <div class="input-group">
+            <h1>CVC</h1>
+            <input type="text" placeholder="3 digit number">
+        </div>
+
+        <a href="orderconfirmation.html" class="finish-button">Finish and Pay</a>
+    </div>
+</body>
+</html>

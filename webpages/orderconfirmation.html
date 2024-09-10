@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eaeaea; 
+        }
+
+        .confirmation-container {
+            width: 80%;
+            max-width: 600px;
+            background-color: #2f4f75;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            text-align: center;
+        }
+
+        .confirmation-container h1 {
+            margin: 0 0 20px;
+            font-size: 36px;
+        }
+
+        .confirmation-container .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .confirmation-container .info div {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .confirmation-container .info div label {
+            margin-right: 10px;
+            font-size: 18px;
+            width: 200px;
+            text-align: left;
+        }
+
+        .confirmation-container .info div input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .confirmation-container .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .confirmation-container .buttons a {
+            padding: 15px 25px;
+            background-color: #037297;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .confirmation-container .buttons a:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <h1>Order Confirmed</h1>
+        
+        <div class="info">
+            <div>
+                <label>Shipping Details:</label>
+                <input type="text" value="702 Harris St, Ultimo, NSW" readonly>
+            </div>
+            <div>
+                <label>Express Shipping:</label>
+                <input type="text" value="Yes" readonly>
+            </div>
+            <div>
+                <label>Total:</label>
+                <input type="text" value="$2.50" readonly>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <a href="mainpage.html">Main Menu</a>
+            <a href="orderhistory.html">Order History</a>
+        </div>
+    </div>
+</body>
+</html>

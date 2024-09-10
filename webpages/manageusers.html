@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Order History</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eaeaea;
+            position: relative; 
+        }
+
+        /* Back button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: #2f4f75;
+            color: white;
+            border: none;
+        }
+
+        .back-button:hover {
+            background-color: gray; 
+        }
+
+        .container {
+            width: 60%;
+            max-width: 800px;
+            height: 70vh;
+            background-color: #2f4f75;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #2f4f75;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid #c0c0c0; 
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+        }
+
+        .customer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            width: 100%;
+            padding-top: 20px;
+            overflow-y: auto;
+        }
+
+        .customer-item {
+            background-color: white;
+            color: #2f4f75;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .product-item p {
+            margin: 10px 0;
+        }
+
+        .checkout-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background-color: #037297;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .checkout-button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="mainpage.html" class="back-button">Back</a>
+
+    <div class="container">
+        <div class="navbar">
+            <h1>Customers List</h1>
+        </div>
+
+        <div class="customer-grid">
+            <div class="customer-item">
+                <p>Username: JohnSmith10</p>
+                <p>First Name: John</p>
+                <p>Last Name: Smith</p>
+                <p>Email: John.g.Smith@gmail.com</p>
+                <p>Gender: Male</p>
+                <p>Password: strongpassword</p>
+                <p>Address: 702 Harris St</p>
+                <p>City: Ultimo</p>
+                <p>Postcode: 2932</p>
+                <p>Phone Number: 9483 9384 3992 9304</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
