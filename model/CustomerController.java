@@ -4,7 +4,7 @@ import java.util.*;
 
 public class CustomerController {
 
-    private final UserDAO customerDAO;
+    private final UserDAO customerDAO;//so user dao or customer dao
 
     public CustomerController(UserDAO customerDAO) {
         this.customerDAO = customerDAO;
