@@ -1,13 +1,24 @@
-package controller;
+package advanced.software.dev;
 
-import model.Order;
-import model.Cart;
-import model.Customer;
+import advanced.software.dev.Order;
+import advanced.software.dev.Cart;
+import advanced.software.dev.Customer;
+
+
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
+
+
 public class OrderController {
+    @FXML
+    private TextField orderIDField;
+    @FXML
+    private Label infoLabel;
     
     private OrderDAO orderDAO;  // Assuming there's an OrderDAO for database operations
 
@@ -36,7 +47,7 @@ public class OrderController {
     }
 
     // Method to view an order by ID
-    public Order viewOrder(int orderID) {
+    public Order viewOrder(String orderID) {
         // Retrieve the order details from the database using OrderDAO
         return orderDAO.getOrderByID(orderID);
     }
@@ -46,5 +57,10 @@ public class OrderController {
         // Retrieve the list of all orders from the database using OrderDAO
         return orderDAO.getAllOrders();
     }
+    @FXML
+    public void trackOrder(){
+        Order shipping = viewOrder(orderIDField.getText());
+        statusLabel.setText(shipping.getShippingStatus());
+        dateLabel..setText(shipping.getShippingStatus());
 }
 
