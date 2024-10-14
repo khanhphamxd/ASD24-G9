@@ -1,0 +1,18 @@
+{
+    "configurations": [
+    {
+        "type": "java",
+        "name": "JUnit Test",
+        "request": "launch",
+        "mainClass": "org.junit.runner.JUnitCore",
+        "args": "admin(pre-int).customer.test.AdminCustomerTest",
+        "classPaths": [
+            "${workspaceFolder}/admin(pre-int)/customer/src/lib/sqlite-jdbc.jar",
+            "${workspaceFolder}/admin(pre-int)/customer/src/lib/junit-4.12.jar",
+            "${workspaceFolder}/admin(pre-int)/customer/src",
+            "${workspaceFolder}/admin(pre-int)/customer/test"
+        ]
+    }
+]
+
+}

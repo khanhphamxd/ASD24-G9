@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "admin(pre-int)/customer/lib/sqlite-jdbc-3.46.1.3.jar",
+        "admin(pre-int)/customer/lib/junit-4.12.jar"
+    ]
+}

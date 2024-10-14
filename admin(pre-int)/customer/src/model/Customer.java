@@ -1,3 +1,5 @@
+package model;
+
 import java.util.regex.Pattern;
 
 public class Customer {
@@ -79,7 +81,7 @@ public class Customer {
 
     // Constructor used for Customer registration, will increment the ID tracker
     public Customer(String username, String firstName, String lastName, String email, String password,
-            String gender, String houseAddress, String phoneNum) {
+            String gender, String houseAddress, String phoneNum, boolean isAdmin) {
         // Assign tracker to the ID, then add 1 to the tracker
         this.customerID = IDTracker;
         IDTracker++;
@@ -93,7 +95,7 @@ public class Customer {
         this.gender = gender;
         this.houseAddress = houseAddress;
         this.phoneNum = phoneNum;
-        this.isAdmin = false;
+        this.isAdmin = isAdmin;
     }
 
     // Constructor used for database extraction, include the ID in the parameter & will not increment the ID tracker
@@ -114,7 +116,7 @@ public class Customer {
     // Validators that checks for the following rules
     //     All fields are not null or a bunch of whitespaces
     //     Names should consists of letters and whitespace in between
-    //     Email should folow the email standard format (gonna be a mouthful to explain the regex)
+    //     Email should follow the email standard format (gonna be a mouthful to explain the regex)
     //     Phone numbers should be all digits, and between 8-15 characters    
 
     public static boolean isNotEmpty(String inputString) {
@@ -168,6 +170,4 @@ public class Customer {
                 + ", lastName=" + lastName + ", email=" + email + ", password=" + password + ", gender=" + gender
                 + ", houseAddress=" + houseAddress + ", phoneNum=" + phoneNum + "]";
     }
-
-
 }
