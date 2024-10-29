@@ -77,15 +77,15 @@ public class DBInitialize {
     private static void insertSampleProducts() {
         // Sample data
         Product[] products = new Product[20];
-        products[0] = new Product("Frozen Pizza", 120, "350g", 4.00, "1.14$ / 100g", "No_Image_Available.jpg");
-        products[1] = new Product("Carrots", 103, "1kg", 2.50, "0.25$ / 100g", "No_Image_Available.jpg");
+        products[0] = new Product("Frozen Pizza", 120, "350g", 4.00, "1.14$ / 100g", "Frozen pizza.png");
+        products[1] = new Product("Carrots", 103, "1kg", 2.50, "0.25$ / 100g", "Carrots.png");
         products[2] = new Product("Eggs", 104, "12 pack", 3.60, "0.30$ / egg", "eggs.jpg");
         products[3] = new Product("Rice", 105, "2kg", 5.00, "0.25$ / 100g", "Rice.jpeg");
         products[4] = new Product("Olive Oil", 106, "500ml", 6.00, "1.20$ / 100ml", "Olive oil.jpg");
         products[5] = new Product("Shampoo", 107, "250ml", 3.50, "1.40$ / 100ml", "Shampoo-HNS.jpg");
-        products[6] = new Product("Chicken Breast", 109, "500g", 7.00, "1.40$ / 100g", "No_Image_Available.jpg");
+        products[6] = new Product("Chicken Breast", 109, "500g", 7.00, "1.40$ / 100g", "Chicken.png");
         products[7] = new Product("Tomato", 110, "250g", 4.50, "0.60$ / 100g", "tomato.jpg");
-        products[8] = new Product("Orange Juice", 112, "1L", 2.80, "0.28$ / 100ml", "No_Image_Available.jpg");
+        products[8] = new Product("Orange Juice", 112, "1L", 2.80, "0.28$ / 100ml", "Orange juice.png");
         products[9] = new Product("Yogurt", 113, "500g", 3.00, "0.60$ / 100g", "Yoghurt.jpeg");
         products[10] = new Product("Cereal", 114, "400g", 3.50, "0.88$ / 100g", "No_Image_Available.jpg");
         products[11] = new Product("Toothpaste", 115, "100ml", 2.00, "2.00$ / 100ml", "No_Image_Available.jpg");
