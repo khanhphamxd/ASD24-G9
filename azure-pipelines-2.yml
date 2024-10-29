@@ -19,14 +19,14 @@ steps:
       jdkArchitectureOption: 'x64'
       jdkSourceOption: 'PreInstalled' 
 
-  - task: Maven@3
+  - task: Maven@4
     inputs:
       mavenVersionOption: 'Default'
       mavenPomFile: 'asdchai/pom.xml'
       goals: 'clean install'
       options: '-DskipTests'
 
-  - task: Maven@3
+  - task: Maven@4
     displayName: 'Run JavaFX Application'
     inputs:
       mavenPomFile: 'asdchai/pom.xml'
