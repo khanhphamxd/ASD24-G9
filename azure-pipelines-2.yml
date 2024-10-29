@@ -1,19 +1,34 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
 
+# https://aka.ms/yaml
 trigger:
-- main
+  branches:
+    include:
+      - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'windows-latest'
+
+variables:
+  mavenVersion: '3.8.4'
+  javaVersion: '17'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+  - task: JavaToolInstaller@0 
+    inputs:
+      versionSpec: $(javaVersion)
+      jdkArchitectureOption: 'x64'
+      jdkSourceOption: 'PreInstalled' 
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+  - task: Maven@3
+    inputs:
+      mavenVersionOption: 'Default'
+      mavenPomFile: 'asdchai/pom.xml'
+      goals: 'clean install'
+      options: '-DskipTests'
+
+  - task: Maven@3
+    displayName: 'Run JavaFX Application'
+    inputs:
+      mavenPomFile: 'asdchai/pom.xml'
+      goals: 'javafx:run'
+      options: '-Djavafx.platform=win'
